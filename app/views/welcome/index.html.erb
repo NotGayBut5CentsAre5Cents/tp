@@ -1,0 +1,12 @@
+<% if(params.has_key?('a') &&
+	params.has_key?('b')) %>
+
+	<%= "a = #{params['a']}" %>
+	<br/>
+	<%= "b = #{params['b']}" %>
+	<br/>
+	<%= "a + b = #{@sum}" %>
+	
+<%else%>
+	<%= link_to("Not enough arguments supplied.", url_options = {a: 5, b:6}) %>
+<% end %>
