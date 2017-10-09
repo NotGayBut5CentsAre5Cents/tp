@@ -1,3 +1,5 @@
+require 'linear-regression'
+
 class LinRegressionsController < ApplicationController
 	Incomes_col = 0
     Col1 = 0
