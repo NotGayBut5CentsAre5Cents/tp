@@ -6,7 +6,7 @@ class LinRegressionsController < ApplicationController
     def calc
         arr = CSVRead(params["file"])
         xs = (1..arr.length).to_a
-        ys =  arr.map { |n| n[Incomes_col].to_i }
+        ys =  arr.map { |n| n[Incomes_col]}
         linear = Regression::Linear.new(xs, ys)
         a = linear.slope
         b = linear.intercept
